@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { HomePage } from '../utils/bookSlice'
-
-
+import {FaTrashCan} from "react-icons/fa6"
+import { FaPenToSquare,FaEye } from 'react-icons/fa6';
 function Table() {
     
     const [book, setBook] = useState(null)
@@ -15,13 +15,6 @@ function Table() {
         const json = await data.json()
         
         setBook(json)
-    }
-
-    function handleDelete(id) {
-        console.log(id)
-        axios.delete(`http://localhost:3000/${id}`)
-        setBook(book.filter((b) => b._id != id))
-
     }
 
     useEffect(() => {
@@ -58,13 +51,13 @@ function Table() {
                                 <td className='border border-black text-center rounded-lg  bg-gray-100'>
                                     <div className='flex justify-around'>
                                         <div >
-                                            <Link to={`/details/${b._id}`}><button>view</button></Link>
+                                            <Link to={`/details/${b._id}`}><button><FaEye/></button></Link>
                                         </div>
                                         <div >
-                                            <Link to={`/edit/${b._id}`} state={{title:title,author:author,year:year}}><button>edit</button></Link>
+                                            <Link to={`/edit/${b._id}`} state={{title:title,author:author,year:year}}><button><FaPenToSquare className='text-yellow-400'/></button></Link>
                                         </div>
                                         <div >
-                                            <button onClick={() => handleDelete(b._id)}>delete</button>
+                                           <Link to={`/delete/${b._id}`} state={{title:title}}><button ><FaTrashCan className='text-red-600'/></button></Link> 
                                         </div>
                                     </div></td>
                             </tr>

@@ -6,6 +6,7 @@ import About from './Pages/About'
 import EditPage from './Pages/EditPage'
 import {Provider} from "react-redux"
 import appStore from './utils/appStore'
+import DeletePage from './Pages/deletePage'
 function App() {
   return (
 <div>
@@ -18,7 +19,7 @@ function App() {
     <Route path='/create' element={<CreateBook/>}></Route>
     <Route path='/details/:id' element={<About/>}></Route>
     <Route path='/edit/:id' element={<EditPage/>}></Route>
-   
+    <Route path='/delete/:id' element={<DeletePage/>}></Route>
    
   </Routes>
  
