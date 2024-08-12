@@ -18,7 +18,7 @@ useEffect(()=>{
 
 async function fetchDetails(){
   try{
-    const data= await fetch(`http://localhost:3000/${id}`)
+    const data= await fetch(`https://bookstore-lboe.onrender.com/${id}`)
     const json=await data.json()
     
     setDetails(json)

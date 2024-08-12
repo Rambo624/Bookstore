@@ -19,7 +19,7 @@ const [formData,setFormData]=useState({
    async function handleSubmit(e){
         e.preventDefault()
         try{
-           await axios.put(`http://localhost:3000/${id}`,formData)
+           await axios.put(`https://bookstore-lboe.onrender.com/${id}`,formData)
             navigate("/")
         }
         catch(error){
