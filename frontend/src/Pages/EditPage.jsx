@@ -43,7 +43,7 @@ useEffect(()=>{
     return (
         <div >
             <Header/>
-            <div className=' ml-20 mt-6 md:ml-[30%] md:mt-[10%]'>
+            <div className=' ml-20 mt-6  md:ml-[30%] md:mt-[10%]'>
             <h1 className='font-bold text-xl mb-5'>Edit Book</h1>
             <div className='inline-block p-8 border border-blue-300  ' >
                 <form onSubmit={handleSubmit} >

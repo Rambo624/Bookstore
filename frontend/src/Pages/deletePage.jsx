@@ -29,7 +29,7 @@ const {id}=useParams()
   return (
     <div>
         <Header/>
-        <div className='ml-[30%] mt-[10%]'>
+        <div className='mt-20 ml-4 md:ml-[30%] md:mt-[10%]'>
             <h1 className='font-bold text-2xl mb-7'>Delete Book</h1>
             <div className='border p-10 border-blue-200 inline-block'>
                 <p>Are you sure you want to delete this book?</p>

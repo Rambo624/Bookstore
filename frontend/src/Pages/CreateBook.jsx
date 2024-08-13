@@ -43,19 +43,19 @@ console.log("Cannot Post the Book data",error)
   return (
     <div >
         <Header/>
-        <div className='inline-block p-8 border border-blue-300 ml-[30%] mt-[10%] ' >
+        <div className='inline-block p-8 border border-blue-300 ml-7 mt-20 md:ml-[30%] md:mt-[10%] ' >
             <form onSubmit={handleSubmit} >
             <div className='my-3'>
             <label className='font-bold' >Title</label><br />
-            <input ref={title}  className='p-1 w-[600px] border border-black rounded-md' type="text" placeholder='Enter Title' />
+            <input ref={title}  className='p-1 md:w-[600px] border border-black rounded-md' type="text" placeholder='Enter Title' />
             </div>
           <div className='my-3'>
           <label className='font-bold' htmlFor="">Author</label><br />
-          <input ref={author}  className='p-1 w-[600px] border border-black rounded-md' type="text" placeholder='Author Name' />
+          <input ref={author}  className='p-1 md:w-[600px] border border-black rounded-md' type="text" placeholder='Author Name' />
           </div>
            <div className='my-3'>
            <label className='font-bold' htmlFor="">Year</label><br />
-           <input ref={year} className='p-1 w-[600px] border border-black rounded-md' type="number" placeholder='Enter Year of Publishing' /><br />
+           <input ref={year} className='p-1 md:w-[600px] border border-black rounded-md' type="number" placeholder='Enter Year of Publishing' /><br />
            <button className='bg-blue-500 p-1 text-white mt-4 border border-black rounded-lg'>Submit</button>
            </div>
           
