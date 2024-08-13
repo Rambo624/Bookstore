@@ -26,14 +26,14 @@ function Table() {
 
     return (
         <div className=''>
-            <table className=' border-spacing-2  border-separate mx-auto mt-10 '>
+            <table className='border-spacing-1 md:border-spacing-2  border-separate mx-auto mt-10 '>
                 <thead  >
                     <tr>
-                        <th className='border border-black rounded-lg p-2 bg-blue-600 text-white'>SI NO</th>
-                        <th className='border border-black rounded-lg px-20  bg-blue-600 text-white'>Title</th>
-                        <th className='border border-black rounded-lg px-20  bg-blue-600 text-white'>Author</th>
-                        <th className='border border-black rounded-lg px-20  bg-blue-600 text-white'>Year</th>
-                        <th className='border border-black rounded-lg px-32  bg-blue-600 text-white'>Operations</th>
+                        <th className='border border-black rounded-lg p-2 bg-blue-600 text-white text-xs md:text-base'>Sl NO</th>
+                        <th className='border border-black rounded-lg  md:px-20  bg-blue-600 text-white text-xs md:text-base  '>Title</th>
+                        <th className='border border-black rounded-lg md:px-20  bg-blue-600 text-white text-xs md:text-base'>Author</th>
+                        <th className='border border-black rounded-lg  md:px-20  bg-blue-600 text-white text-xs md:text-base'>Year</th>
+                        <th className='border border-black rounded-lg  md:px-32  bg-blue-600 text-white text-xs md:text-base'>Operations</th>
                     </tr>
 
                 </thead>
@@ -44,11 +44,11 @@ function Table() {
                             <tr key={index}>
 
 
-                                <td className='border border-black text-center rounded-lg bg-gray-100'>{index + 1}</td>
-                                <td className='border border-black text-center rounded-lg  bg-gray-100'>{title}</td>
-                                <td className='border border-black text-center rounded-lg  bg-gray-100'>{author}</td>
-                                <td className='border border-black text-center rounded-lg  bg-gray-100'>{year}</td>
-                                <td className='border border-black text-center rounded-lg  bg-gray-100'>
+                                <td className='border border-black text-center rounded-lg bg-gray-100 text-xs md:text-base'>{index + 1}</td>
+                                <td className='border border-black text-center rounded-lg  bg-gray-100 text-xs md:text-base md:p-0 '>{title}</td>
+                                <td className='border border-black text-center rounded-lg  bg-gray-100 text-xs md:text-base'>{author}</td>
+                                <td className='border border-black text-center rounded-lg  bg-gray-100 text-xs md:text-base p-1 md:p-0'>{year}</td>
+                                <td className='border border-black text-center rounded-lg  bg-gray-100 text-xs md:text-base'>
                                     <div className='flex justify-around'>
                                         <div >
                                             <Link to={`/details/${b._id}`}><button><FaEye/></button></Link>
