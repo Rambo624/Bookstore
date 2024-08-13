@@ -20,7 +20,7 @@ const {id}=useParams()
 
     function handleDelete(id) {
         console.log(id)
-        axios.delete(`http://localhost:3000/${id}`)
+        axios.delete(`https://bookstore-v634.onrender.com/${id}`)
        navigate("/")
 
     }
