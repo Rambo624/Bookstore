@@ -9,10 +9,9 @@ const bookRouter=require("./Routes/BookRouter")
 
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow only this origin
-  methods: ['GET', 'POST','PUT','DELETE','PATCH'], // Allow only specific HTTP methods
-  allowedHeaders: ['Content-Type'], // Allow only specific headers
-  
+  origin: '*', // Allow any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type'],
 }));
 
 app.use(express.json())
