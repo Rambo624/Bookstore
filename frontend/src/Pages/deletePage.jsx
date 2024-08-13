@@ -18,9 +18,9 @@ const {id}=useParams()
         },[])
 
 
-    function handleDelete(id) {
+   async function handleDelete(id) {
         console.log(id)
-        axios.delete(`https://bookstore-v634.onrender.com/${id}`)
+       await axios.delete(`https://bookstore-v634.onrender.com/${id}`)
        navigate("/")
 
     }

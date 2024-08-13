@@ -29,7 +29,7 @@ async function handleSubmit(e){
     year:year.current.value
   }
   try{
-    axios.post(`https://bookstore-v634.onrender.com/`,BookData),
+   await axios.post(`https://bookstore-v634.onrender.com/`,BookData),
     console.log("posted successfully")
     navigate("/")
   }
