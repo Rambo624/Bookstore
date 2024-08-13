@@ -11,7 +11,7 @@ function Table() {
 
 
     async function bookData() {
-        const data = await fetch("https://bookstore-lboe.onrender.com/")
+        const data = await fetch("http://localhost:3000/")
         const json = await data.json()
         
         setBook(json)
